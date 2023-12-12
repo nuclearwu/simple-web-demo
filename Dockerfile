@@ -1,4 +1,4 @@
-FROM node:16-alpine as builder
+FROM cis-hub-huadong-7.cmecloud.cn/nuclearwu/node:16-alpine as builder
 WORKDIR /app/demo
 ADD . .
 RUN yarn install && yarn build
