@@ -3,7 +3,7 @@ WORKDIR /app/demo
 ADD . .
 RUN yarn install && yarn build
 
-FROM nginx:1.21
+FROM cis-hub-huadong-7.cmecloud.cn/nuclearwu/nginx:1.21
 ARG GITVERSION
 COPY --from=builder /app/demo/dist /usr/share/nginx/html
 COPY default.conf /etc/nginx/nginx.conf
